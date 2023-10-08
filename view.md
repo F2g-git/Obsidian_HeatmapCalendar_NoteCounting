@@ -61,11 +61,13 @@ const calendarData = {
 
 for (const [key,value] of Object.entries(dailyDict)){
     //dv.span("<br>" + page.file.name) // uncomment for troubleshooting
-    calendarData.entries.push({
-        date: key,     // (required) Format YYYY-MM-DD
-        intensity: value-1, // (required) the data you want to track, will map color intensities automatically
-        color: 'green'
-    })
+    if (value >1){
+	    calendarData.entries.push({
+	        date: key,     // (required) Format YYYY-MM-DD
+	        intensity: value-1, // (required) the data you want to track, will map color intensities automatically
+	        color: 'green'
+	    });
+    }
 }
 
 renderHeatmapCalendar(this.container, calendarData)
