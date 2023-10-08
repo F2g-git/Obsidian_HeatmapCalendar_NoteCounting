@@ -6,4 +6,16 @@ As a preparation i use the obsidian [Update Time on Edit](https://github.com/bea
 
 I had originally forseen to use `dv.view()` from Dataview but unfortunately it does not render the calender. Anyway, i have a script that you could use, if you figure out how to make it render. It is in heatMap.js.
 
-To use it as is, just copy the content of view.md into a note.
+To use it as is, just copy the content of view.md into a note. You can also customize this.
+
+## Customization
+You can change the folders to be read for the calendar view by changing it here:
+```js
+const docs = dv.pages('"" and -("Excalidraw" and "_ressources" and "_templates")');
+```
+All folders in `-()` are excluded from the calendar. 
+
+
+
+
+
