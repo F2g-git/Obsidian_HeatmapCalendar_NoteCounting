@@ -14,8 +14,17 @@ You can change the folders to be read for the calendar view by changing it here:
 const docs = dv.pages('"" and -("Excalidraw" and "_ressources" and "_templates")');
 ```
 All folders in `-()` are excluded from the calendar. 
+```js
+if (value >1){
+  calendarData.entries.push({
+      date: key,     // (required) Format YYYY-MM-DD
+      intensity: value, // (required) the data you want to track, will map color intensities automatically
+      color: 'green'
+  });
+}
+```
+I use the if clause to prevent lighting up every day, as I have daily notes for every day so far, and those would just clog up my view.
 
-
-
-
-
+## Example
+I have used Joplin for about a year and now use Obsidian since August, hence I still have only a few notes.
+![grafik](https://github.com/MsgtGreer/Obsidian_HeatmapCalendar_NoteCounting/assets/50106495/c9c2ee56-cfb0-423f-8f04-f2df4e702104)
