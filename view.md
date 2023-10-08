@@ -1,10 +1,5 @@
 ```dataviewjs
-const start = moment();
-const daysback = parseInt(dv.current().daysback) || 2;
-const location = dv.current().location || '';
 const dateField = 'created';
-const chartColor = '#4e9a06';
-const chartlength = parseInt(dv.current().chartlength) || 50;
 const docs = dv.pages('"" and -("Excalidraw" and "_ressources" and "_templates")');
 
 function parseDateField(page){	
